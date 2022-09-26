@@ -2,8 +2,7 @@ import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { RiCloseLine } from 'react-icons/ri';
 import { HiOutlineMenu } from 'react-icons/hi';
-
-import { logo } from '../assets';
+import { GiMusicSpell } from 'react-icons/gi';
 import { links } from '../assets/constants';
 
 const NavLinks = ({ handleClick }) => (
@@ -27,7 +26,8 @@ const Sidebar = () => {
   return (
     <>
       <div className="md:flex hidden flex-col w-[240px] py-10 px-4 bg-[#191624]">
-        <img src={logo} alt="logo" className="w-full h-14 object-contain" />
+        <GiMusicSpell className="w-20 h-20 text-gray-300" />
+        <h2 className="text-gray-300 text-3xl font">Sangeet</h2>
         <NavLinks />
       </div>
 
@@ -43,7 +43,8 @@ const Sidebar = () => {
         className={`absolute top-9 h-screen w-2/3 bg-gradient-to-tl from-white/10 to-[#483d8b] backdrop-blur-lg z-10 p-6 md:hidden smooth-transition ${
           mobileMenuOpen ? 'left-0' : '-left-full'
         }`}>
-        <img src={logo} alt="logo" className="w-full h-14 object-contain" />
+        <GiMusicSpell className="w-20 h-20 text-gray-300" />
+        <h2 className="text-gray-300 text-3xl font">Sangeet</h2>
         <NavLinks handleClick={() => setMobileMenuOpen(false)} />
       </div>
     </>
